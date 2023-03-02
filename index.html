@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyper</title>
+  <link rel="stylesheet" href="https://unpkg.com/primeflex@3.2.1/primeflex.css">
+  <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css">
+  <link rel="stylesheet" href="./node_modules/primeicons/primeicons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="jquery.js" type="text/javascript"></script>
+  <style>
+    html,
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+   .sidebar-active{
+      display: block !important;
+      z-index: 9;
+      background: white;
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="flex">
+    <div class="sidebar hidden lg:block flex-shrink-0 absolute lg:static left-0 top-0 bottom-0 border-right-1 surface-border select-none " style="width: 280px;">
+      <div class="flex flex-column h-full">
+        <div class="flex align-items-center px-5 flex-shrink-0">
+          <img src="img/icon.png" class="-ml-2 mt-2">
+          <img src="img/Hyper.png" class="ml-2 mt-2">
+        </div>
+        <div class="mt-3">
+          <ul class="list-none p-3 m-0">
+            <li class="text-500 mt-3"> FAVORITES</li>
+            <li class="hover:shadow-2 hover:text-primary"> <i class="pi pi-home mr-2 mt-3 ml-3 mb-3"></i>Dashboard</li>
+            <li class="hover:shadow-2 hover:text-primary"> <i class="pi pi-bookmark mr-2 mt-2 ml-3 mb-3"></i>Bookmarks</li>
+            <li class="hover:shadow-2 hover:text-primary"> <i class="pi pi-users mr-2 mt-2 ml-3 mb-3"></i>Team</li>
+            <li class="hover:shadow-2 hover:text-primary"> <i class="pi pi-comments mr-2 mt-2 ml-3 mb-3"></i>Messages <img src="img/badge.png" class=" ml-3 pl-8" </li>
+            <li class="hover:shadow-2 hover:text-primary"> <i class="pi pi-calendar mr-2 mt-2 ml-3 mb-3"></i>Calendar</li>
+          </ul>
+        </div>
+        <div class="pt-3">
+          <ul class="list-none p-3 m-0">
+            <li class="text-500"> APPLICATION</li>
+            <li class="hover:shadow-2 hover:text-primary"><i class="pi pi-folder mr-2 mt-3 ml-3 mb-3"></i>Projects</li>
+            <li class="hover:shadow-2 hover:text-primary"> <i class="pi pi-chart-bar mr-2 mt-3 ml-3 mb-3"></i>Reports</li>
+            <li class="hover:shadow-2 hover:text-primary"> <i class="pi pi-cog mr-2 mt-3 ml-3 mb-3"></i>Settings</li>
+          </ul>
+        </div>
+        <hr class="mt-auto mb-3 mx-3 border-top-1 border-none surface-border">
+        <div class="p-4 pt-1">
+          <img src="img/avatar.png" class="mr-2" style="width:28px; height:28px;">
+          <span class="font-medium " > Amy Elsner</span>
+          <i class="pi pi-chevron-up ml-8"></i>
+        </div>
+      </div>
+    </div>
+    <div class="min-h-screen flex flex-column relative flex-auto surface-50 w-full">
+      <div class="flex justify-content-between align-items-center px-5 surface-0  border-bottom-1 surface-border relative lg:static" style="height: 60px">
+        <div class="flex">
+          <a class=" cursor-pointer inline-flex align-items-center justify-content-center lg:hidden text-700 mr-3">
+            <button type="button" id="btn" class="btn pi pi-bars text-4xl border-none  surface-0 cursor-pointer "></button>
+          </a>
+          <span class="align-items-center">
+            <i class="pi pi-search text-500 ml-3 "></i>
+            <input type="text" placeholder="Search" class="text-base text-color surface-overlay p-2 border-0 border-none surface-border border-round appearance-none outline-none focus:border-primary ">
+          </span>
+        </div>
+          <ul class="list-none p-0 m-0 flex align-items-center select-none surface-section border-none surface-border right-0 absolute ">
+            <li><i class="pi pi-inbox mr-7 text-500" ></i></li>
+            <li><i class="pi pi-bell pr-6 text-500" ></i></li>
+            <li><img src="img/avatar.png " class="mr-3"> </li>
+          </ul>
+      </div>
+      <p class="text-3xl ml-3 text-left mb-2 "> Popular Products</p>
+      <p class="text-xl text-600 ml-3 text-left m-0">Selected Exclusively</p>
+      <div class="border-0 shadow-2 surface-overlay border-3 border-round m-2" style="min-width: 200px;">
+        <div class="card_header flex justify-content-between align-items-center">
+          <p class="ml-3">Top Sales</p>
+          <i class="pi pi-ellipsis-v mr-5"></i>
+        </div>
+        <div class="flex mb-3">
+          <div class=" ml-3">
+            <img src="img/img1.png" class="md:h-5rem h-8rem w-5rem">
+          </div>
+          <div class="flex flex-column sm:flex-row sm:align-items-center sm:justify-content-between mr-4 w-full flex-wrap ">
+            <div class="">
+              <p class="m-0 ml-3 mt-1"> Dui id ornare arcu</p>
+              <div class="flex flex-wrap ">
+                <p class="text-sm text-500 mt-2 ml-3 pr-2 mb-2">Zara </p>
+                <div class="font-medium border-green-100 border-round bg-green-100 text-xs text-green-600 mt-2 " style="width: 40px; height: 18px;">$12.34</div>
+              </div>
+              <span class="ml-3" >
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm"></i>
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm"></i>
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm"></i>
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm"></i>
+                <i class="pi pi-star-fill text-300 "></i>
+              </span>
+            </div>
+            <div class="sm:text-right ml-3 mt-3 md:mt-0">
+              <p class="text-lg mt-0">$12345.00</p>
+              <p class="text-500 text-xs text-left sm:text-right"> 123K Reviews</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex mb-3">
+          <div class=" ml-3">
+            <img src="img/img2.png" class="md:h-5rem h-8rem w-5rem">
+          </div>
+          <div class="flex flex-column sm:flex-row sm:align-items-center sm:justify-content-between mr-4 w-full flex-wrap">
+            <div class="">
+              <p class="m-0 ml-3 mt-1 "> Nulla pellentesque</p>
+              <div class="flex flex-wrap ">
+                <p class="text-sm text-500 ml-3 pr-2 mb-2">H&M</p>
+                <div class="border-green-100 font-medium border-round bg-green-100 text-xs text-green-600 mt-3 " style="width: 40px; height: 18px;">$12.34</div>
+              </div>
+              <span class="ml-3" >
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm"></i>
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm"></i>
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm"></i>
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm"></i>
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm "></i>
+              </span>
+            </div>
+            <div class="sm:text-right ml-3 mt-3 md:mt-0">
+              <p class="text-lg mt-0">$12345.00</p>
+              <p class="text-500 text-xs text-left sm:text-right"> 123K Reviews</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex mb-3">
+          <div class=" ml-3">
+            <img src="img/img3.png" class="md:h-5rem h-8rem w-5rem">
+          </div>
+          <div class="flex flex-column sm:flex-row sm:align-items-center sm:justify-content-between mr-4 w-full flex-wrap">
+            <div class="">
+              <p class="m-0 ml-3 mt-1"> Semper eget</p>
+              <div class="flex flex-wrap ">
+                <p class="text-sm text-500 ml-3 pr-2 mb-2">Zara</p>
+                <div class="border-green-100 font-medium border-round bg-green-100 text-xs text-green-600 mt-3 " style="width: 40px; height: 18px;">$12.34</div>
+              </div>
+              <span class="ml-3" >
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm"></i>
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm"></i>
+                <i class="pi pi-star-fill text-300 text-sm"></i>
+                <i class="pi pi-star-fill text-300 text-sm"></i>
+                <i class="pi pi-star-fill text-300 text-sm"></i>
+              </span>
+            </div>
+            <div class="sm:text-right ml-3 mt-3 md:mt-0">
+              <p class="text-lg mt-0">$12345.00</p>
+              <p class="text-500 text-xs text-left sm:text-right"> 123K Reviews</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex mb-3">
+          <div class=" ml-3">
+            <img src="img/img4.png" class="md:h-5rem h-8rem w-5rem">
+          </div>
+          <div class="flex flex-column sm:flex-row sm:align-items-center sm:justify-content-between mr-4 w-full flex-wrap">
+            <div class="">
+              <p class="m-0 ml-3 mt-1"> Vulputate eu</p>
+              <div class="flex flex-wrap ">
+                <p class="text-sm text-500 ml-3 pr-2 mb-2">Nike</p>
+                <div class="border-purple-100 font-medium border-round bg-purple-100 text-xs text-purple-600 mt-3 vertical-align-middle text-xs mr-1" style="width: 28px; height: 18px;">Sale</div>
+                <div class="border-green-100 border-round font-medium bg-green-100 text-xs text-green-600 mt-3 vertical-align-middle text-xs" style="width: 40px; height: 18px;">$12.34</div>
+              </div>
+              <span class="ml-3" >
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm"></i>
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm"></i>
+                <i class="pi pi-star-fill text-300 text-sm"></i>
+                <i class="pi pi-star-fill text-300 text-sm"></i>
+                <i class="pi pi-star-fill text-300 text-sm "></i>
+              </span>
+            </div>
+            <div class="sm:text-right ml-3 mt-3 md:mt-0">
+              <p class="text-lg mt-0">$12345.00</p>
+              <p class="text-500 text-xs text-left sm:text-right"> 123K Reviews</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex mb-3">
+          <div class=" ml-3">
+            <img src="img/img5.png" class="md:h-5rem h-8rem w-5rem">
+          </div>
+          <div class="flex flex-column sm:flex-row sm:align-items-center sm:justify-content-between mr-4 w-full flex-wrap">
+            <div class="">
+              <p class="m-0 ml-3 mt-1 "> Arcu feli</p>
+              <div class="flex flex-wrap ">
+                <p class="text-sm text-500 ml-3 pr-2 mb-2">GAP</p>
+                <div class="border-green-100 font-medium border-round bg-green-100 text-xs text-green-600 mt-3 -m-1 " style="width: 40px; height: 18px;">$12.34</div>
+              </div>
+              <span class="ml-3" >
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm"></i>
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm"></i>
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm"></i>
+                <i class="pi pi-star-fill text-yellow-500 mr-1 text-sm"></i>
+                <i class="pi pi-star-fill text-300 "></i>
+              </span>
+            </div>
+            <div class="sm:text-right ml-3 mt-3 md:mt-0">
+              <p class="text-lg mt-0">$12345.00</p>
+              <p class="text-500 text-xs text-left sm:text-right"> 123K Reviews</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col-12 md:col-6 lg:col-4">
+          <div class="p-2">
+            <div class="shadow-2 p-4 surface-card border-round">
+              <div class="relative mb-3">
+                <span class="surface-card text-900 shadow-1 px-3 py-2 absolute" style="border-radius: 1.5rem; left: 1rem; top:1rem; ">Winter</span>
+                <img src="img/img6.png" class="w-full" style="width: 264.67px; height: 340px;">
+              </div>
+              <div class="flex justify-content-between align-items-center mb-3">
+                <span class="text-900 font-medium text-xl">Natoque penatibus</span>
+                <span>
+                  <i class="pi pi-star-fill text-yellow-500 mr-1"></i>
+                  <span class="font-medium">5.0</span>
+                </span>
+              </div>
+                <p class="mt-0 mb-3 text-600 line-height-3 text-justify" style="width: 350px; "> Arcu felis bibendum ut tristique er egestas quis ipsum suspendisse.</p>
+                <span class="text-primary text-xl font-medium " >$123.00</span> 
+            </div>
+          </div>
+        </div>
+        <div class="col-12 md:col-6 lg:col-4">
+          <div class="p-2">
+            <div class="shadow-2 p-4 surface-card border-round">
+              <div class="relative mb-3">
+                <span class="surface-card text-900 shadow-1 px-3 py-2 absolute" style="border-radius: 1.5rem; left: 1rem; top:1rem; ">Accessories</span>
+                <img src="img/img7.png" class="w-full" style="width: 264.67px; height: 340px;">
+              </div>
+              <div class="flex justify-content-between align-items-center mb-3">
+                <span class="text-900 font-medium text-xl">Ipsum a arcu</span>
+                <span>
+                  <i class="pi pi-star-fill text-yellow-500 mr-1"></i>
+                  <span class="font-medium">5.0</span>
+                </span>
+              </div>
+                <p class="mt-0 mb-3 text-600 line-height-3 text-justify " style="width: 350px; "> Enim nec dui nunc mattis enim ut tellus.Tincidunt arcu.</p>
+                <span class="text-primary text-xl font-medium ">$123.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 md:col-6 lg:col-4">
+          <div class="p-2">
+            <div class="shadow-2 p-4 surface-card border-round">
+              <div class="relative mb-3">
+                <span class="surface-card text-900 shadow-1 px-3 py-2 absolute" style="border-radius: 1.5rem; left: 1rem; top:1rem; ">Bags</span>
+                <img src="img/img8.png" class="w-full" style="width: 264.67px; height: 340px;">
+              </div>
+              <div class="flex justify-content-between align-items-center mb-3">
+                <span class="text-900 font-medium text-xl">Vulputate eu</span>
+                <span>
+                  <i class="pi pi-star-fill text-yellow-500 mr-1"></i>
+                  <span class="font-medium">5.0</span>
+                </span>
+              </div>
+                <p class="mt-0 mb-3 text-600 line-height-3 text-justify " style="width: 350px; ">Justo laoreet sit amet cursus.Semper viverra nam libero justo laoreet.</p>
+                <span class="text-primary text-xl font-medium  ">$123.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div> 
+</body>
+</html>
